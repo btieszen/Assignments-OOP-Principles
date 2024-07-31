@@ -46,6 +46,12 @@ def monthly_budget(category_budget):
     else:
        print("You have ",total, "left over")
        
+def add_expense(category_budget):
+    expense.new_expense(category_budget)
+    
+def display_category_summary(category_budget):
+    category_display.display_category_summary(category_budget)
+       
        
 def main():
     category_budget ={'Food':500,'Entertainment':200,'Bills':2000}
@@ -65,10 +71,10 @@ def main():
                 monthly_budget(category_budget)
                     
             elif category_name =="2":
-                category_display.display_category_summary(category_budget)
-                #budget.display_category_summary(category_budget)     
+                display_category_summary(category_budget)
+                  
             elif category_name =="3":
-                expense.new_expense(category_budget) 
+                add_expense(category_budget)
                 
             elif category_name =="4":
                 update_expense.update(category_budget)
